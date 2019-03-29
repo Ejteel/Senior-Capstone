@@ -13,7 +13,7 @@ refer to http://docs.nativescript.org/ui/theme.
 
 /* Common */
 .fa {
-    font-family: "Varela";
+    font-family: 'FontAwesome', 'fontawesome-webfont';
 }
 .page {
     background-color: #ffffff;
@@ -34,7 +34,8 @@ refer to http://docs.nativescript.org/ui/theme.
 }
 
 .btn:highlighted {
-    background-color: #2241F0;
+  background-color: #EAEAEA;
+  color: #000000;
 }
 
 .flexbox-item {
@@ -86,6 +87,14 @@ refer to http://docs.nativescript.org/ui/theme.
 
 .company-logo {
     flex-grow: 1;
+}
+
+.btn-FB-login{
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+/*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+  margin-bottom: 15;
 }
 
 .Email-input-field{
@@ -160,11 +169,38 @@ refer to http://docs.nativescript.org/ui/theme.
     border-width: 1;
     border-radius: 50%;
     font-size: 36;
-    color: #3C59FD;
+    color: #00853E;
     background-color: #ffffff;
     border-color: #d8d8d8;
 }
 
 .action-button{
     font-size: 20;
+}
+
+.page-signup{
+  background-color: #ffffff;
+}
+
+.signup-Email-input-field{
+  background-color: #ffffff;
+  margin-bottom: 10;
+}
+
+.signup-Password-input-field{
+  background-color: #ffffff;
+}
+
+.btn-register{
+  color: #ffffff;
+  background-color: #000000;
+  margin-top: 5;
+  margin-bottom: 5;
+}
+
+.btn-signup-login{
+  color: #000000;
+  background-color: #ffffff;
+  margin-top: 5;
+  margin-bottom: 15;
 }
