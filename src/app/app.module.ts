@@ -5,6 +5,10 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 
 import { LoggedInLazyLoadGuard } from "./logged-in-lazy-load.guard";
+import { NavigationService } from "./services/navigation.service";
+
+import { NativeScriptFacebookModule } from "nativescript-facebook/angular";
+import { init, LoginBehavior } from "nativescript-facebook";
 
 @NgModule({
     bootstrap: [
@@ -12,13 +16,15 @@ import { LoggedInLazyLoadGuard } from "./logged-in-lazy-load.guard";
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NativeScriptFacebookModule
     ],
     declarations: [
         AppComponent
     ],
     providers: [
-        LoggedInLazyLoadGuard
+        LoggedInLazyLoadGuard,
+        NavigationService
     ],
     schemas: [
         NO_ERRORS_SCHEMA
