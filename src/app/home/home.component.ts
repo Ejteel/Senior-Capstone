@@ -1,10 +1,10 @@
 import { Component, ElementRef, OnInit } from "@angular/core";
 import { Kinvey, User } from 'kinvey-nativescript-sdk';
 import { RouterExtensions } from "nativescript-angular/router";
-import { Page } from "tns-core-modules/ui/page"
+import { Page } from "tns-core-modules/ui/page";
 import { EventData } from "tns-core-modules/data/observable";
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout";
-
+import { NativeScriptRouterModule } from "nativescript-angular/router";
 import * as Facebook from "nativescript-facebook";
 import { NavigationService } from "../../services/navigation.service";
 import { config } from "../../app.config";
@@ -14,7 +14,7 @@ import * as appSettings from "tns-core-modules/application-settings";
 @Component({
     selector: "Home",
     moduleId: module.id,
-    templateUrl: "./home.component.html"
+    templateUrl: "./home.component.html",
 })
 
 export class HomeComponent implements OnInit {
@@ -42,7 +42,10 @@ export class HomeComponent implements OnInit {
             alert("Error getting user info: " + err);
         });
     }
-
+	ngOnInit(): void
+	{
+		
+	}
     onLogout(eventData: Facebook.LoginEventData) {
         if (eventData.error) {
             alert("Error during login: " + eventData.error);
@@ -52,14 +55,16 @@ export class HomeComponent implements OnInit {
         }
 
     }
-
+	
     logout() {
         Facebook.logout(() => {
             appSettings.clear();
             this.navigationService.go(['login'], "slideRight");
         });
     }
-
+	public fav(){
+		this.navigationService.go(['fav'], "slideRight");
+	}
     public getCurrentAccessToken() {
         let accessToken = Facebook.getCurrentAccessToken();
 
