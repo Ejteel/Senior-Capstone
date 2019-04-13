@@ -21,8 +21,8 @@
             <Label text="News" class="text-center" (tap)="onMenuButtonTap($event)"></Label>
         </StackLayout>
         <StackLayout row="1" col="0" data-name="favorites" class="menu-item">
-            <Button text="&#xf005;" class="fa menu-icon" (tap)="onMenuButtonTap($event)"></Button>
-            <Label text="Local Favorites" class="text-center" (tap)="onMenuButtonTap($event)"></Label>
+            <Button text="&#xf005;" class="fa menu-icon" (tap)="fav()"> (</Button>
+            <Label text="Local Favorites" class="text-center" (tap)="fav()" ></Label>
         </StackLayout>
         <StackLayout row="1" col="1" data-name="settings" class="menu-item">
             <Button text="&#xf085;" class="fa menu-icon" (tap)="onMenuButtonTap($event)"></Button>
