@@ -17,6 +17,19 @@ var HomeComponent = /** @class */ (function () {
             _this.loggedUser = user.data['_socialIdentity'].kinveyAuth.id;
         });
     };
+
+  HomeComponent.prototype.fav = function () {
+	this._routerExtensions.navigate(["fav"], {
+                clearHistory: true,
+                animated: true,
+                transition: {
+                    name: "slideBottom",
+                    duration: 350,
+                    curve: "ease"
+                }
+	});
+  };
+  
     HomeComponent.prototype.logout = function () {
         var _this = this;
         kinvey_nativescript_sdk_1.Kinvey.User.logout()
